@@ -15,7 +15,6 @@ data "aws_ami" "app_ami" {
 }
 
 resource "aws_instance" "web" {
-  vpc_id        = vpc-007bc0717a702ebc6
   ami           = data.aws_ami.app_ami.id
   instance_type = "t3.nano"
 
